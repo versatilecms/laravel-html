@@ -1,0 +1,35 @@
+{
+    "name": "versatilelibs/laravel-html",
+    "description": "HTML and Form Builders for the Laravel Framework",
+    "require": {
+        "php": ">=7.1.3",
+        "illuminate/http": "5.6.*",
+        "illuminate/routing": "5.6.*",
+        "illuminate/session": "5.6.*",
+        "illuminate/support": "5.6.*",
+        "illuminate/view": "5.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Versatile\\Html\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Versatile\\Html\\HtmlServiceProvider",
+                "Versatile\\Html\\BootstrapServiceProvider"
+            ],
+            "aliases": {
+                "Form": "Versatile\\Html\\FormFacade",
+                "Html": "Versatile\\Html\\HtmlFacade",
+                "BootForm": "Versatile\\Html\\Bootstrap\\Facades\\Bootstrap"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
